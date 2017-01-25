@@ -1,3 +1,10 @@
+#LoxApi v2
+
+##Api
+
+###`/health`
+- `GET` -> Hello World!
+
 ##Random Notes
 
 ### application.yml notes

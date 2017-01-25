@@ -7,6 +7,10 @@
 
 ##Random Notes
 
+##Useful Links
+- application.yml [property docs](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+ 
+
 ### application.yml notes
 
         driverClassName: org.h2.Driver

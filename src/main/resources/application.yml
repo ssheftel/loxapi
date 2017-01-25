@@ -1,7 +1,8 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: ${JDBC_DATABASE_URL}
+    url: testfail
+#    url: ${JDBC_DATABASE_URL}
 #    driverClassName: org.h2.Driver
 #    url: jdbc:h2:mem:test;MODE=PostgreSQL
 #    url: jdbc:postgresql://localhost:5432/my_db

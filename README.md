@@ -7,6 +7,11 @@
 
 ##Notes
 
+###httpie endpoints
+
+    http POST localhost:8080/api/auth/login X-Requested-With:XMLHttpRequest username=moemoe password=password
+
+
 ##Useful Links
 - application.yml [property docs](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
 - jwt + spring security

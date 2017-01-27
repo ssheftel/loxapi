@@ -5,10 +5,12 @@
 ###`/health`
 - `GET` -> Hello World!
 
-##Random Notes
+##Notes
 
 ##Useful Links
 - application.yml [property docs](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+- jwt + spring security
+    - great [jwt authentication tutorial](http://www.svlada.com/jwt-token-authentication-with-spring-boot/)
  
 
 ### application.yml notes

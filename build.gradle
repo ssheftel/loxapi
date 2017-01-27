@@ -34,6 +34,8 @@ dependencies {
 	compile 'postgresql:postgresql:9.1-901-1.jdbc4'
     compile 'com.h2database:h2:1.4.193'
 	compile "org.flywaydb:flyway-core:4.0.3"
+	compile "io.jsonwebtoken:jjwt:0.7.0"
+	compile "org.apache.commons:commons-lang3:3.3.2"
 
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

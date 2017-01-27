@@ -14,8 +14,14 @@ public class HealthController {
         this.healthRepository = healthRepository;
     }
 
+    @RequestMapping("/api/health")
+    public HealthEntity securedHealth() {
+        HealthEntity health = healthRepository.findById(1L);
+        return health;
+    }
+
     @RequestMapping("/health")
-    public HealthEntity index() {
+    public HealthEntity unsecuredHealth() {
         HealthEntity health = healthRepository.findById(1L);
         return health;
     }

@@ -9,8 +9,17 @@
 
 ###httpie endpoints
 
+authenticating
+
     http POST localhost:8080/api/auth/login X-Requested-With:XMLHttpRequest username=moemoe password=password
 
+checking health
+
+    http GET localhost:8080/health
+    
+checking health with jwt
+
+    http GET localhost:8080/api/health X-Authorization:"Bearer <jwt_token>"
 
 ##Useful Links
 - application.yml [property docs](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)

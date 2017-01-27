@@ -16,3 +16,9 @@ flyway:
   locations: classpath:/db/migration
   baselineOnMigrate: true
   checkLocation: true
+
+loxapi.security.jwt:
+  tokenExpirationTime: 15 # Number of minutes
+  refreshTokenExpTime: 60 # Minutes
+  tokenIssuer: http://localhost:8080 # TODO: make env var
+  tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus # TODO: Change value and set via env var

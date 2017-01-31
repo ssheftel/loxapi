@@ -7,6 +7,9 @@ spring:
     minIdle: 2
     initialSize: 5
     removeAbandoned: true
+  jpa.properties.hibernate:
+    dialect: "com.marvinformatics.hibernate.json.PostgreSQLJsonDialect"
+
 
 security:
   ignored: /health

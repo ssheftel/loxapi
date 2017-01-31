@@ -1,13 +1,38 @@
-CREATE TABLE APP_USER (
-  ID SERIAL PRIMARY KEY,
-  USERNAME TEXT NOT NULL,
-  PASSWORD TEXT NOT NULL
+CREATE TABLE app_user (
+  id SERIAL PRIMARY KEY,
+  username TEXT NOT NULL,
+  password TEXT NOT NULL,
+  email TEXT NOT NULL,
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  gender TEXT NOT NULL,
+  photo_url TEXT DEFAULT '',
+  profile jsonb DEFAULT '{}'::JSON,
+  event_name TEXT NOT NULL ,
+  active BOOL DEFAULT TRUE
 );
 
-CREATE TABLE USER_ROLE (
-  APP_USER_ID INTEGER NOT NULL,
-  ROLE TEXT NOT NULL
+--------------------------
+
+CREATE TABLE user_role (
+  app_user_id INTEGER NOT NULL REFERENCES app_user (id),
+  role TEXT NOT NULL
 );
 
-INSERT INTO APP_USER(USERNAME, PASSWORD) VALUES ('moemoe','$2a$10$wplTezGx9cliSRkW2b6cfuJgck6OeAQuQ4apsNsNaz.tbSDwY6Z9y'); -- password is 'password' but BCrypt'ed
-INSERT INTO USER_ROLE(APP_USER_ID, ROLE) VALUES (1, 'ADMIN');
+--------------------------
+
+CREATE TABLE user_like (
+  id SERIAL PRIMARY KEY,
+  app_user_id INTEGER NOT NULL REFERENCES app_user (id),
+  liked_user_id INTEGER NOT NULL REFERENCES app_user (id),
+  unliked BOOL DEFAULT FALSE
+);
+
+--------------------------
+
+-- CREATE TABLE user_profile (
+--   id SERIAL PRIMARY KEY,
+--   app_user_id INTEGER NOT NULL REFERENCES app_user (id),
+--   key TEXT NOT NULL,
+--   value TEXT NOT NULL
+-- );

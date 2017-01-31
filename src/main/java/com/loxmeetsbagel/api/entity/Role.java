@@ -5,7 +5,7 @@ package com.loxmeetsbagel.api.entity;
  *
  */
 public enum Role {
-    ADMIN, PREMIUM_MEMBER, MEMBER;
+    ADMIN, PARTICIPANT;
 
     public String authority() {
         return "ROLE_" + this.name();
